@@ -1,0 +1,59 @@
+<!-- <script>
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher();
+
+    export let open;
+
+    const open_burger = () => {
+        open = !open;
+        dispatch("burger-open", {
+            status: open
+        });
+    }
+</script> -->
+
+<!-- class="burger"
+on:click={open_burger} -->
+<div th:fragment="burger">
+    <button class="open">
+        <div id="top"></div>
+        <div id="mid"></div>
+        <div id="bot"></div>
+    </button>
+
+    <style>
+        .burger {
+            padding-bottom: 0.5rem;
+            padding-right: 0.5rem;
+            transition: color 300ms ease-in-out;
+        }
+
+        #top {width: 32px;}
+        #mid {width: 24px;}
+        #bot {width: 16px;}
+
+        #top, #mid, #bot {
+            height: 1px;
+            margin: 5px;
+            font-weight: light;
+            background-color: var(--text-color);
+            transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+        }
+
+        /* rotate the top line */
+        .open #top {
+            transform: translate(2px, 7px) rotate(45deg) scaleX(0.8);
+        }
+
+        /* hide the middle */
+        .open #mid {
+            transform: translateX(-35px);
+            opacity: 0;
+        }
+
+        /* rotate the bottom line */
+        .open #bot {
+            transform: translate(10px, -5px) rotate(-44deg) scaleX(1.6);
+        }
+    </style>
+</div>

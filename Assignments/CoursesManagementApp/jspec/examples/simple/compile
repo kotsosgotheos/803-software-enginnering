@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd ../..
+make
+cd examples/simple
+
+javac -cp ../../export/jspec.jar ./*.spec.java ./*.java
+java -cp ../../export/jspec.jar:. testrunner
+rm ./*.class

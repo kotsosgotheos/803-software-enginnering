@@ -1,0 +1,29 @@
+<div th:fragment="copyright">
+    <div class="copyright">
+        <a th:href="@{/courses(userid=${userid})}" draggable="false">
+            <img class="logo" src="/img/logo.png" alt="CMA logo" draggable="false">
+        </a>
+        <div class="copyright-text">
+            Courses Management App © 2022
+        </div>
+    </div>
+    
+    <style>
+        .copyright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        .logo {
+            width: 13rem;
+        }
+    
+        .copyright-text {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+    </style>
+</div>

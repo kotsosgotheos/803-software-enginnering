@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd simple
+./compile
+cd ..
+
+cd stack
+./compile
+cd ..
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Add Student Details</title>
+</head>
+<body>
+    <div class="container">
+        <div class="name">Add Student Details</div>
+
+        <div class="data">
+            <i>Data:</i>
+            <ul>
+                <li>&lt;student id&gt;</li>
+                <li>&lt;student name&gt;</li>
+                <li>&lt;year or registration&gt;</li>
+                <li>&lt;semester&gt;</li>
+            </ul>
+        </div>
+
+        <div class="actors">
+            <i>Actors</i>
+            <ol>
+                <li>Professor</li>
+            </ol>
+        </div>
+
+        <div class="preconditions">
+            <i>Pre Conditions</i>
+            <ol>
+                <li>-</li>
+            </ol>
+        </div>
+
+        <div class="primary-course">
+            <i>Main Flow:</i>
+            <ol>
+                <li>Professor issues the "Add Details" command</li>
+                <li>Professor fills in the data textfields acordingly</li>
+                <li>Professor presses the 'OK' button</li>
+                <li>System repeats the 'Browse Student List' use case</li>
+            </ol>
+        </div>
+
+        <div class="exception-course">
+            <i>Field not filled (1)</i>
+            <ol>
+                <li>System notifies professor that a text fields is not filled with data.</li>
+                <li>System does not proceed and prompts professor to fill in the remaining fields (highlights with red)</li>
+            </ol>
+        </div>
+
+        <div class="exception-course">
+            <i>Exiting Student (2)</i>
+            <ol>
+                <li>System notifies professor that the student attempting to add exists in the list.</li>
+                <li>System repeats 'Add Student Details'</li>
+            </ol>
+        </div>
+
+        <div class="postconditions">
+            <i>Post Conditions</i>
+            <ol>
+                <li>List of students is updated with the new item</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

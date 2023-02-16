@@ -1,0 +1,43 @@
+<!-- TODO Add logo in login/register pages -->
+<div th:fragment="header">
+    <header>
+        <nav class="logo">
+            <div th:replace="layout/header/logo :: logo(userid=${userid})" />
+        </nav>
+    
+        <nav class="route-links">
+            <div th:replace="layout/header/route_links :: route_links(userid=${userid})" />
+        </nav>
+    </header>
+
+    <style>
+        header {
+            position: fixed;
+            background-color: var(--nav-bg-color);
+            top: 0;
+            left: 0;
+            width: 100vw;
+            box-shadow: 0 2px 5px 0 var(--nav-shadow-color),
+                0 2px 10px 0 var(--nav-shadow-color);
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            transition: 300ms;
+        }
+    
+        .logo {
+            width: 12rem;
+            padding: 0 2.25rem;
+            display: flex;
+            align-items: center;
+        }
+    
+        .route-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 0 2.3rem;
+        }
+    </style>    
+</div>

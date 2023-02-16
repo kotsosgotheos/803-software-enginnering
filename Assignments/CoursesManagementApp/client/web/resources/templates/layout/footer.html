@@ -1,0 +1,44 @@
+<footer th:fragment="footer">
+    <div class="copyright">
+        <div th:replace="layout/footer/copyright :: copyright(userid=${userid})" />
+    </div>
+
+    <hr class="divider">
+
+    <div class="contact">
+        <div th:replace="layout/footer/contact :: contact" />
+    </div>
+
+    <style>
+        footer {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            padding: 2rem;
+            font-weight: 300;
+            box-shadow: 0 -2px 5px 0 var(--nav-shadow-color),
+                0 2px 10px 0 var(--nav-shadow-color);
+        }
+        .copyright, .contact {
+            grid-column: span 3 / span 3;
+            padding-bottom: 0.75rem;
+        }
+    
+        .divider {
+            padding: 0.75rem 0;
+            grid-column: span 3 / span 3;
+            border-top: 1px solid rgba(152, 152, 152, 0.3);
+            opacity: 0.5;
+        }
+    
+        @media (min-width: 768px) {
+            .copyright, .contact {
+                grid-column: span 1 / span 1;
+            }
+    
+            .divider {
+                display: none;
+            }
+        }
+    </style>
+</footer>

@@ -1,0 +1,43 @@
+<div th:fragment="contact">
+    <div class="contact">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            &nbsp;
+            GR 45110 - Ioannina, Greece
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            &nbsp;
+            +30 26510-07196
+        </div>
+        <a style="color: #5383d3;" href="mailto:gramcs@cc.uoi.gr" draggable="false">
+            <i class="fa fa-envelope"></i>
+            &nbsp;
+            gramcs@cc.uoi.gr
+        </a>
+    </div>
+    
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css");
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        i {
+            font-family: "Font Awesome 5 Free";
+            background-color: var(--underline-color);
+            color: var(--white-color);
+            font-size: 26px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</div>
